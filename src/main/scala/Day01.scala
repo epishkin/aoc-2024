@@ -1,14 +1,12 @@
 package aoc2024
 
-import scala.io.Source
-
 object Day01 {
   private val TEST_FILE = "day01-test.txt"
   private val DATA_FILE = "day01-data.txt"
 
   def main(args: Array[String]): Unit = {
-    assert(computeTotalDistance(TEST_FILE) == 11)
-    assert(computeSimilarityScore(TEST_FILE) == 31)
+    assertResult(11, computeTotalDistance(TEST_FILE))
+    assertResult(31, computeSimilarityScore(TEST_FILE))
 
     println(computeTotalDistance(DATA_FILE))
     println(computeSimilarityScore(DATA_FILE))
@@ -38,8 +36,7 @@ object Day01 {
   }
 
   private def parseInput(inputFile: String) = {
-    val rows = Source.fromResource("aoc2024/" + inputFile)
-      .getLines
+    val rows = readFile(inputFile)
       .map(_.split("\\s+").filter(_.nonEmpty) match {
         case Array(a, b) => (a.toInt, b.toInt)
       })

@@ -1,7 +1,7 @@
 import scala.io.Source
 
 package object aoc2024 {
-  def assertResult(expected: Int, actual: Int): Unit = {
+  def assertResult(expected: Long, actual: Long): Unit = {
     assert(expected == actual, s"Expected $expected but got $actual")
   }
 

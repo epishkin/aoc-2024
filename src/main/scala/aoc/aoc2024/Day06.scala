@@ -1,4 +1,4 @@
-package aoc2024
+package aoc.aoc2024
 
 import scala.collection.mutable
 

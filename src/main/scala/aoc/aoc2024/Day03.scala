@@ -1,4 +1,4 @@
-package aoc2024
+package aoc.aoc2024
 
 object Day03 {
   private val TEST_FILE = "day03-test.txt"

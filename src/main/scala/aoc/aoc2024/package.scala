@@ -1,3 +1,5 @@
+package aoc
+
 import scala.io.Source
 
 package object aoc2024 {
@@ -7,7 +9,7 @@ package object aoc2024 {
 
 
   def readFile(inputFile: String): Iterator[String] = {
-    Source.fromResource("aoc2024/" + inputFile)
+    Source.fromResource("aoc/aoc2024/" + inputFile)
       .getLines
   }
 }
